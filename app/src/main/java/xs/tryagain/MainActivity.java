@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
             case 8:
                 bar8.setBackgroundColor(color);
                 break;
-            case 19:
+            case 96:
                 new CountDownTimer(1250, blinkInterval) {
                     private boolean on = true;
 
@@ -133,7 +133,7 @@ public class MainActivity extends Activity {
                     }
                 }.start();
                 break;
-            case 21:
+            case 102:
                 new CountDownTimer(1250, blinkInterval) {
                     private boolean on = true;
 
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
                     }
                 }.start();
                 break;
-            case 22:
+            case 103:
                 new CountDownTimer(1250, blinkInterval) {
                     private boolean on = true;
 
