@@ -111,20 +111,21 @@ public class MainActivity extends Activity {
             case 19:
                 new CountDownTimer(1250, blinkInterval) {
                     private boolean on = true;
-                    public void onTick (long millisUntilFinished) {
-                        if (on){
+
+                    public void onTick(long millisUntilFinished) {
+                        if (on) {
                             bar3.setBackgroundColor(blinkcolor);
                             bar4.setBackgroundColor(blinkcolor);
                             bar5.setBackgroundColor(blinkcolor);
                             on = false;
-                        }
-                        else {
+                        } else {
                             bar3.setBackgroundColor(0xFF000000);
                             bar4.setBackgroundColor(0xFF000000);
                             bar5.setBackgroundColor(0xFF000000);
                             on = true;
                         }
                     }
+
                     public void onFinish() {
                         bar3.setBackgroundColor(0xFF000000);
                         bar4.setBackgroundColor(0xFF000000);
@@ -135,15 +136,15 @@ public class MainActivity extends Activity {
             case 21:
                 new CountDownTimer(1250, blinkInterval) {
                     private boolean on = true;
-                    public void onTick (long millisUntilFinished) {
-                        if (on){
+
+                    public void onTick(long millisUntilFinished) {
+                        if (on) {
                             bar0.setBackgroundColor(blinkcolor);
                             bar1.setBackgroundColor(blinkcolor);
                             bar2.setBackgroundColor(blinkcolor);
                             bar3.setBackgroundColor(blinkcolor);
                             on = false;
-                        }
-                        else {
+                        } else {
                             bar0.setBackgroundColor(0xFF000000);
                             bar1.setBackgroundColor(0xFF000000);
                             bar2.setBackgroundColor(0xFF000000);
@@ -151,6 +152,7 @@ public class MainActivity extends Activity {
                             on = true;
                         }
                     }
+
                     public void onFinish() {
                         bar0.setBackgroundColor(0xFF000000);
                         bar1.setBackgroundColor(0xFF000000);
@@ -160,17 +162,17 @@ public class MainActivity extends Activity {
                 }.start();
                 break;
             case 22:
-                new CountDownTimer(1250,blinkInterval) {
+                new CountDownTimer(1250, blinkInterval) {
                     private boolean on = true;
-                    public void onTick (long millisUntilFinished) {
-                        if (on){
+
+                    public void onTick(long millisUntilFinished) {
+                        if (on) {
                             bar5.setBackgroundColor(blinkcolor);
                             bar6.setBackgroundColor(blinkcolor);
                             bar7.setBackgroundColor(blinkcolor);
                             bar8.setBackgroundColor(blinkcolor);
                             on = false;
-                        }
-                        else {
+                        } else {
                             bar5.setBackgroundColor(0xFF000000);
                             bar6.setBackgroundColor(0xFF000000);
                             bar7.setBackgroundColor(0xFF000000);
@@ -178,6 +180,7 @@ public class MainActivity extends Activity {
                             on = true;
                         }
                     }
+
                     public void onFinish() {
                         bar5.setBackgroundColor(0xFF000000);
                         bar6.setBackgroundColor(0xFF000000);
@@ -192,9 +195,85 @@ public class MainActivity extends Activity {
             case 97:
                 blinkInterval = 125;
                 break;
-            case 100;
+            case 100:
+                new CountDownTimer(1250, blinkInterval) {
+                    private int cnt = 0;
+
+                    public void onTick(long millisUntilFinished) {
+                        switch (cnt) {
+                            case 0:
+                                bar3.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 1:
+                                bar2.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 2:
+                                bar1.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 3:
+                                bar0.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 4:
+                                bar0.setBackgroundColor(0xFF000000);
+                                bar1.setBackgroundColor(0xFF000000);
+                                bar2.setBackgroundColor(0xFF000000);
+                                bar3.setBackgroundColor(0xFF000000);
+                                cnt = 0;
+                                break;
+                        }
+                    }
+
+                    public void onFinish() {
+                        bar0.setBackgroundColor(0xFF000000);
+                        bar1.setBackgroundColor(0xFF000000);
+                        bar2.setBackgroundColor(0xFF000000);
+                        bar3.setBackgroundColor(0xFF000000);
+                    }
+                }.start();
                 break;
-            case 101;
+            case 101:
+                new CountDownTimer(1250, blinkInterval) {
+                    private int cnt = 0;
+
+                    public void onTick(long millisUntilFinished) {
+                        switch (cnt) {
+                            case 0:
+                                bar5.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 1:
+                                bar6.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 2:
+                                bar7.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 3:
+                                bar8.setBackgroundColor(blinkcolor);
+                                cnt += 1;
+                                break;
+                            case 4:
+                                bar5.setBackgroundColor(0xFF000000);
+                                bar6.setBackgroundColor(0xFF000000);
+                                bar7.setBackgroundColor(0xFF000000);
+                                bar8.setBackgroundColor(0xFF000000);
+                                cnt = 0;
+                                break;
+                        }
+                    }
+
+                    public void onFinish() {
+                        bar5.setBackgroundColor(0xFF000000);
+                        bar6.setBackgroundColor(0xFF000000);
+                        bar7.setBackgroundColor(0xFF000000);
+                        bar8.setBackgroundColor(0xFF000000);
+                    }
+                }.start();
                 break;
         }
         return block;
